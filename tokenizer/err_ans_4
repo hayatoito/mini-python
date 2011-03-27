@@ -1,0 +1,11 @@
+tokenizer_test/err_prob_4.py:5: wrong indent level
+   4
+fatal error (tokenizer.c:99)
+TOK_LITERAL_INT (1)
+TOK_NEWLINE
+TOK_INDENT
+TOK_LITERAL_INT (2)
+TOK_NEWLINE
+TOK_INDENT
+TOK_LITERAL_INT (3)
+TOK_NEWLINE

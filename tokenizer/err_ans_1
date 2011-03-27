@@ -1,0 +1,4 @@
+tokenizer_test/err_prob_1.py:1: wrong token  (next char = )
+abcd
+fatal error (tokenizer.c:90)
+TOK_ID (abcd)

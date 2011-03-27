@@ -1,0 +1,5 @@
+tokenizer_test/err_prob_2.py:2: wrong token 03 (next char =  )
+03 
+fatal error (tokenizer.c:90)
+TOK_LITERAL_FLOAT (03.1)
+TOK_NEWLINE

@@ -1,0 +1,33 @@
+TOK_ID (or_)
+TOK_ID (and_)
+TOK_ID (not_)
+TOK_ID (is_)
+TOK_ID (in_)
+TOK_NEWLINE
+TOK_ID (break_)
+TOK_ID (continue_)
+TOK_ID (pass_)
+TOK_ID (return_)
+TOK_ID (del_)
+TOK_ID (print_)
+TOK_ID (global_)
+TOK_ID (if_)
+TOK_ID (elif_)
+TOK_ID (else_)
+TOK_ID (for_)
+TOK_ID (while_)
+TOK_ID (def_)
+TOK_NEWLINE
+TOK_ID (None_)
+TOK_NEWLINE
+TOK_ID (a1)
+TOK_ID (b1)
+TOK_NEWLINE
+TOK_ID (a)
+TOK_PERIOD
+TOK_ID (x)
+TOK_NEWLINE
+TOK_ID (a2)
+TOK_PERIOD
+TOK_ID (x)
+TOK_NEWLINE
