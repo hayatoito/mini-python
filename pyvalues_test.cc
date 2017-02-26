@@ -36,3 +36,9 @@ TEST_F(PyValuesTest, mk_py_val) {
 
 
 }  // namespace
+
+int main(int argc, char *argv[])
+{
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
+}

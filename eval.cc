@@ -80,7 +80,7 @@ class env {
 
 env::env(env_t _genv, ostream& _os)
     : genv(_genv),
-      stdout(_os == std::cout && _genv != NULL ?
+      stdout(&_os == &std::cout && _genv != NULL ?
              _genv->stdout : _os) {
 }
 
@@ -369,7 +369,6 @@ py_val_t env::eval_stmt(stmt_t s) {
       return 0;
   }
 }
-ao
 
 py_val_t env::eval_stmt_print(stmt_t s) {
   py_val_t v = eval_expr(s->u.e);

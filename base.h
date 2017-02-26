@@ -14,7 +14,7 @@
   TypeName();                                    \
   DISALLOW_COPY_AND_ASSIGN(TypeName)
 
-#define FOREACH(it,c) for(typeof((c).begin()) it=(c).begin();it!=(c).end();++it)
+#define FOREACH(it,c) for(auto it=(c).begin();it!=(c).end();++it)
 
 #define LOG(level) logging::GetLogger##level(__FILE__,  __LINE__)
 

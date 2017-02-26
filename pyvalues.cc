@@ -55,7 +55,7 @@ stack_trace_entry_t stack_trace::pop_last() {
   return last;
 }
 
-void stack_trace::runtime_error(src_pos_t pos, const string& msg) {
+void stack_trace::error(src_pos_t pos, const string& msg) {
   cout << "runtime errro: " << msg << endl;
   cout << pos->filename << ":" << pos->line_no
        << " col:" << pos->column_no << endl;
@@ -91,10 +91,6 @@ void stack_trace_pop(stack_trace_t bt, char * name, src_pos_t call_site) {
 
 void print_stack_trace(stack_trace_t bt) {
   bt->print();
-}
-
-void runtime_error(stack_trace_t bt, src_pos_t pos, const char * msg) {
-  bt->runtime_error(pos, msg);
 }
 
 py_dict_entry_vec_t mk_py_dict_entry_vec() {
@@ -164,7 +160,7 @@ int py_val_int(py_val_t pi, stack_trace_t bt, src_pos_t pos) {
   if (py_is_int(pi)) {
     return toint(pi) >> 1;
   } else {
-    runtime_error(bt, pos, "require <int> value\n");
+    bt->error(pos, "require <int> value\n");
     return 0;
   }
 }
@@ -184,7 +180,7 @@ int py_val_char(py_val_t pc, stack_trace_t bt, src_pos_t pos) {
   if (py_is_char(pc)) {
     return toint(pc) >> 3;
   } else {
-    runtime_error(bt, pos, "require <char> value\n");
+    bt->error(pos, "require <char> value\n");
     return 0;
   }
 }
@@ -216,7 +212,7 @@ double py_val_float(py_val_t v, stack_trace_t bt, src_pos_t pos) {
   if (py_is_float(v)) {
     return v->u.f;
   } else {
-    runtime_error(bt, pos, "require <float> value\n");
+    bt->error(pos, "require <float> value\n");
     return 0.0;
   }
 }
@@ -345,4 +341,3 @@ ostream& operator<<(ostream& os, const py_val_t& v) {
   }
   return os;
 }
-

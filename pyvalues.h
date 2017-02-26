@@ -206,7 +206,7 @@ class stack_trace {
   void push(char* name, src_pos_t call_site);
   void pop(char* name, src_pos_t call_site);
   stack_trace_entry_t pop_last();
-  void runtime_error(src_pos_t pos, const string& msg);
+  void error(src_pos_t pos, const string& msg);
   stack_trace_entry_t& operator[](int i) {
     return (*entries)[i];
   }
